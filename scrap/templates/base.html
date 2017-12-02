@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang = "pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio Web Scrapping</title>
+		<link rel="stylesheet" 
+			 href="{% static 'styles/bootstrap.css' %}">
+		<link rel="stylesheet" 
+			 href="{% static 'styles/main.css' %}">
+
+	</head>
+	<body>
+		<div class="container">
+			<div class = "header">
+				<h3 class = "text-muted">Exercicio Web Scrapping</h3>
+			</div>
+			
+			<div class="row content">
+				{% block body%}
+				{% endblock %}				
+			</div>		
+		</div>	
+	</body>
+</html>

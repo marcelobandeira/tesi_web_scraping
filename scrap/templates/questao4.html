@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class = "col-lg-12">
+	<h1>Questao 4</h1>
+	<h4>Populational density of the coutries</h4>
+	<p>Data from  <a href="http://example.webscraping.com/">http://example.webscraping.com/</a></p>
+	<table class="table table-striped">
+		<tr>
+			<th>Country</th>
+			<th>Density</th>
+		</tr>
+		{% for item in items.all %}
+			<tr>
+				<td>{{item.country}}</td>
+				<td>{{item.density}}</td>
+			</tr>
+		{% endfor %}	
+ 	</table>
+</div>		
+{% endblock %}		

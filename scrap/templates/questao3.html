@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class = "col-lg-12">
+	<h1>Questao 3</h1>
+	<h4>Weather in Teresina, Brazil</h4>
+	<p>Data from <a href="https://www.climatempo.com.br/previsao-do-tempo/cidade/264/teresina-pi">https://www.climatempo.com.br/previsao-do-tempo/cidade/264/teresina-pi</a></p>
+	<table class="table table-striped">
+		<tr>
+			<th>Temperature</th>
+			<th>Condition</th>
+			<th>Sensation</th>
+			<th>Humidity</th>
+			<th>Pressure</th>
+			<th>Updated At</th>
+		</tr>
+		{% for item in items.all %}
+			<tr>
+				<td>{{item.temperature}}</td>
+				<td>{{item.condition}}</td>
+				<td>{{item.sensation}}</td>
+				<td>{{item.humidity}}</td>
+				<td>{{item.pressure}}</td>
+				<td>{{item.updated_at}}</td>
+
+			</tr>
+		{% endfor %}	
+ 	</table>
+</div>		
+{% endblock %}		

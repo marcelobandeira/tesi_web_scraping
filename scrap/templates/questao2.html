@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class = "col-lg-12">
+	<h1>Questao 2</h1>
+	<h4>Movies: Top Box Office in USA</h4>
+	<p>Data from <a href="http://www.imdb.com/chart/boxoffice">http://www.imdb.com/chart/boxoffice</a></p>
+	<table class="table table-striped">
+		<tr>
+			<th>Movie</th>
+			<th>Week Gross</th>
+			<th>Total Gross</th>
+			<th>Weeks</th>
+		</tr>
+		{% for movie in items.all %}
+			<tr>
+				<td>{{movie.movie}}</td>
+				<td>{{movie.gross}}</td>
+				<td>{{movie.gross_total}}</td>
+				<td>{{movie.weeks}}</td>
+			</tr>
+		{% endfor %}	
+ 	</table>
+</div>		
+{% endblock %}		
